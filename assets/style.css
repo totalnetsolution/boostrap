@@ -1,141 +1,65 @@
-$carousel-control-color:             $white;
-$carousel-control-width:             15%;
-$carousel-control-opacity:           .5;
-$carousel-control-hover-opacity:     .9;
-$carousel-control-transition:        opacity .15s ease;
-
-$carousel-indicator-width:           30px;
-$carousel-indicator-height:          3px;
-$carousel-indicator-hit-area-height: 10px;
-$carousel-indicator-spacer:          3px;
-$carousel-indicator-opacity:         .5;
-$carousel-indicator-active-bg:       $white;
-$carousel-indicator-active-opacity:  1;
-$carousel-indicator-transition:      opacity .6s ease;
-
-$carousel-caption-width:             70%;
-$carousel-caption-color:             $white;
-$carousel-caption-padding-y:         1.25rem;
-$carousel-caption-spacer:            1.25rem;
-
-$carousel-control-icon-width:        2rem;
-
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
-
-$carousel-transition-duration:       .6s;
-$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
-
-body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  footer {
-    background-color: #ffffff;
-    color: #000000;
-    bottom: 0;
-    width: 100vw;
-    font-size: 16px;
-  }
-  footer * {
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-  }
-
-  .row {
-    padding: 1em 1em;
-  }
-  .row.primary {
-    display: grid;
-    grid-template-columns: 3fr 2fr 4fr;
-    align-items: stretch;
-  }
-  .column {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0 2em;
-    min-height: 15em;
-  }
-  h3 {
-    width: 100%;
-    text-align: left;
-    color: #000000;
-    font-size: 1.4em;
-    white-space: nowrap;
-  }
-  ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-  }
-  li:not(:first-child) {
-    margin-top: 0.8em;
-  }
-  ul li a {
-    color: #000000;
-    text-decoration: none;
-  }
-  ul li a:hover {
-    color: #c7940a;
-  }
-  .about p {
-    text-align: justify;
-    line-height: 2;
-    margin: 0;
-  }
-  input,
-  button {
-    border: 1px solid;
-    font-size: 1em;
-    padding: 1em;
-    width: 100%;
-    border-radius: 5px;
-    margin-bottom: 5px;
-  }
-  button {
-    background-color: #c7940a;
-    color: #000000;
-  }
-  div.social {
-    display: flex;
-    justify-content: space-around;
-    font-size: 2.4em;
-    flex-direction: row;
-    margin-top: 0.5em;
-  }
-  .social i {
-    color: #000000;
-  }
-  .copyright {
-    padding: 0.3em 1em;
-    background-color: #ffffff;
-  }
-  .footer-menu{
-    float: left;
-      margin-top: 10px;
-  }
-  .footer-menu a{
-    color: #000000;
-    padding: 6px;
-    text-decoration: none;
-  }
-  .footer-menu a:hover, .social i:hover{
-    color: #c7940a;
-  }
-  .copyright p {
-    font-size: 0.9em;
-    text-align: right;
-  }
-  @media screen and (max-width: 850px) {
-    .row.primary {
-      grid-template-columns: 1fr;
+$theme-colors: {
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "black":      $black,
+}
+@media only screen and (max-width: 960px) {
+    .header .social-icons-container {
+        display:block;
     }
-  }  
+    .header__extras {
+        flex: 0 0 25%;
+    }
+    .header__nav-toggle {
+        flex: 0;   
+    }
+}
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+   i {
+  font-family: FontAwesome !important;
+       padding-left: 25px;
+      }
+  i.fa.fa-facebook {
+  font-family: FontAwesome !important;
+       padding-left: 30px;
+       .fa:hover {
+        opacity: 0.9;
+    }
+
+    .fa-linkedin {
+        background: #007bb5;
+        color: white;
+    }
+
+    .fa-pinterest {
+        background: #cb2027;
+        color: white;
+    }
+
+    .fa-reddit {
+        background: #ff5700;
+        color: white;
+    }
+
+    .fa {
+        padding: 20px;
+        font-size: 40px;
+        width: 60px;
+        text-decoration: none;
+        margin: 5px 80px;
+    }
+  
+}
+
+  body{
+      margin: 0 auto;
+      padding: 0 auto;
+  }
